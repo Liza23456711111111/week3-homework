@@ -7,6 +7,59 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.carousel {
+    max-width: 500px;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;   
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.carousel .carusel__actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carusel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: 0;
+    background-color: rgba(94, 95, 97, 0.647);
+    color: #fff;
+    margin: 0.5rem;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -160,7 +213,7 @@ html {
 }
 
 footer {
-    margin-top: 45rem;
+    margin-top: 65rem;
     text-align: center;
     color: #777;
 }
